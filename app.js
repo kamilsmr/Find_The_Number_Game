@@ -18,15 +18,15 @@ let input = document.querySelector('#userInput');
 
     
     if (input.value=="") {
-        output.innerHTML = "Write a number";
+        output.innerHTML = "Boş bırakma lütfen";
     }
     else if (isNaN(input.value)){
-        output.innerHTML = "It's not a number";
+        output.innerHTML = "Lütfen dalga geçme sayı yaz";
 
     }
     else if (input.value == number) {
-        output.innerHTML = "Thanks for game!"
-        test.innerHTML = `This is your test number: ${count}`;
+        output.innerHTML = "Teşekkürler Tekrar Bekleriz!"
+        test.innerHTML = `Tahmin Sayısı: ${count}`;
         alert(`Harika Bir İş Dostum :D. Tam Olarak ${count} Seferde Buldun!`);
         const choice = confirm(`Yeniden Oynamak ister Misin?`);
         if (choice){
@@ -36,18 +36,18 @@ let input = document.querySelector('#userInput');
 
         }
         else{
-            alert("Thanks for playing");
+            alert("Teşekkürler Tekrar Bekleriz!");
         }
     }
      else if (input.value < number) {
         count++;
         output.innerHTML = "Sayıyı Yükselt"
-        test.innerHTML = `This is your test number: ${count}`;
+        test.innerHTML = `Tahmin Sayısı: ${count}`;
     }
     else if (input.value > number) {
         count++;
         output.innerHTML = "Sayıyı Düşür";
-        test.innerHTML = `This is your test number: ${count}`;
+        test.innerHTML = `Tahmin Sayısı: ${count}`;
     }
 
     document.getElementById('userInput').focus();
